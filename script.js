@@ -549,13 +549,21 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Header scroll effect (optimized)
         const header = document.querySelector('.header');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
         if (header) {
             if (scrolled > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = '0 2px 20px rgba(0, 255, 136, 0.2)';
+                navLinks.forEach(link => {
+                    link.style.color = '#000000';
+                });
             } else {
-                header.style.background = 'rgba(0, 0, 0, 0.9)';
+                header.style.background = 'rgba(255, 255, 255, 0.9)';
                 header.style.boxShadow = 'none';
+                navLinks.forEach(link => {
+                    link.style.color = '#000000';
+                });
             }
         }
         
